@@ -2,7 +2,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#FCFDF2;color:#12291B;font-family:'Schibsted Grotesk',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body{margin:0;background:#FCFDF2;color:#12291B;font-family:'Schibsted Grotesk',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body{overflow-x:clip}
 ::selection{background:#DBFF4A;color:#12291B}
 
@@ -95,6 +95,8 @@ details[open] summary{background:#F2FFA6}
 /* ---------- responsive: home ---------- */
 @media (max-width:1080px){
   .bento-5,.bento-4,.bento-3,.bento-7{grid-column:span 6 !important}
+  /* keep the streaks phone shot below the text in narrow cards — absolute overlap hides copy */
+  .streak-shot{position:static !important;display:block;margin:22px auto -150px !important;transform:rotate(-2deg) !important;width:88% !important}
 }
 @media (max-width:760px){
   .bento-5,.bento-4,.bento-3,.bento-7{grid-column:span 12 !important}
